@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LGTRibbon.LiteDB</AssemblyName>
+    <RootNamespace>LGTRibbon.LiteDB</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LGT_Ribbon.Core\LGT_Ribbon.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MapInfo.Controls.RT">
+      <HintPath>..\DLLs\MapInfo.Controls.RT.dll</HintPath>
+    </Reference>
+    <Reference Include="MapInfo.Types">
+      <HintPath>..\DLLs\MapInfo.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="rtcore_ux">
+      <HintPath>..\DLLs\rtcore_ux.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

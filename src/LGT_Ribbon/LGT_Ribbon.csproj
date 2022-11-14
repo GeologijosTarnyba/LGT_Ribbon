@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <UsingTask TaskName="MapBasicBuild.CompileMb" AssemblyFile="..\DLLs\MapBasicBuildTasks.dll" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCpu</Platform>
+    <ProjectGuid>{AECBF37C-44D2-421C-83DA-D9B9996A1A26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LGT_Ribbon</RootNamespace>
+    <AssemblyName>LGT_Ribbon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <MapBasicExePath>C:\Program Files\MapInfo\MapBasic\MapBasic.exe</MapBasicExePath>
+    <TargetFrameworkProfile />
+    <!-- <MapBasicExePath>..\DLLs\MapBasic.exe</MapBasicExePath> -->
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCpu' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCpu</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiteDB, Version=4.1.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.4.1.4\lib\net40\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="MapBasicBuildTasks">
+      <HintPath>..\DLLs\MapBasicBuildTasks.dll</HintPath>
+      <HintPath>..\DLLs\MapBasicBuildTasks.dll</HintPath>
+    </Reference>
+    <Reference Include="MapInfo.Application.RT">
+      <HintPath>..\DLLs\MapInfo.Application.RT.dll</HintPath>
+      <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Application.RT.dll</HintPath>
+    </Reference>
+    <Reference Include="MapInfo.Controls.RT">
+      <HintPath>..\DLLs\MapInfo.Controls.RT.dll</HintPath>
+      <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Controls.RT.dll</HintPath>
+    </Reference>
+    <Reference Include="MapInfo.Events">
+      <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="MapInfo.Types">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\MapInfo.Types.dll</HintPath>
+      <HintPath>C:\Program Files\MapInfo\Professional\MapInfo.Types.dll</HintPath>
+      <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AddIn" />
+    <Reference Include="System.AddIn.Contract" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MB.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Base\IMapInfoProAddIn.cs" />
+    <Compile Include="Source\Base\MapInfoProAddInBase.cs" />
+    <Compile Include="Source\Base\DelegateCommand.cs" />
+    <Compile Include="Source\Helpers\Scrape.cs" />
+    <Compile Include="Source\HelloRibbonAddIn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <CustomBuild Include="Source\LGT_Ribbon.mb" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LGT_Ribbon.Core\LGT_Ribbon.Core.csproj">
+      <Project>{1aa1add8-6dc4-48bf-a7e4-a0ce7bcfa83e}</Project>
+      <Name>LGT_Ribbon.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LGT_Ribbon.LiteDB\LGT_Ribbon.LiteDB.csproj">
+      <Project>{99a51882-60f1-49d1-9d85-d1d089d05385}</Project>
+      <Name>LGT_Ribbon.LiteDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LGT_Ribbon.Seed\LGT_Ribbon.Seed.csproj">
+      <Project>{0ad62440-2a91-4fe5-baa1-e5a49954a947}</Project>
+      <Name>LGT_Ribbon.Seed</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="BuildMapBasic" AfterTargets="Build" Inputs="@(CustomBuild)" Outputs="@(CustomBuild->'$(OutDir)\%(Filename).mbx')">
+    <Message Text="Building with mapbasic: $(MapBasicExePath)" />
+    <MapBasicBuild.CompileMb SourceFiles="@(CustomBuild->'%(FullPath)')" MapBasicExe="$(MapBasicExePath)" OutputFolder="$(OutDir)" IntermediateFolder="$(IntDir)" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

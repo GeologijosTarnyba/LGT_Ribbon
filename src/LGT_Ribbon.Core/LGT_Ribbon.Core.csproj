@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LGT_Ribbon.Core</AssemblyName>
+    <RootNamespace>LGT_Ribbon.Core</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MapInfo.Controls.RT">
+      <HintPath>..\DLLs\MapInfo.Controls.RT.dll</HintPath>
+    </Reference>
+    <Reference Include="MapInfo.Types">
+      <HintPath>..\DLLs\MapInfo.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="rtcore_ux">
+      <HintPath>..\DLLs\rtcore_ux.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

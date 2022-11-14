@@ -1,0 +1,10 @@
+MapBasicBuildTasks.dll
+    <HintPath>C:\Program Files\MapInfo\MapBasic\Samples\RIBBONINTERFACE\DotNet\MapBasicBuildTask\MapBasicBuildTasks.dll</HintPath>
+MapInfo.Application.RT.dll
+    <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Application.RT.dll</HintPath>
+MapInfo.Controls.RT.dll
+    <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Controls.RT.dll</HintPath>
+MapInfo.Types.dll
+    <HintPath>C:\Program Files\MapInfo\Runtime\MapInfo.Types.dll</HintPath>
+rtcore_ux.dll
+    <HintPath>C:\Program Files\MapInfo\Runtime\rtcore_ux.dll</HintPath>
