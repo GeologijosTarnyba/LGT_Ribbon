@@ -664,11 +664,12 @@ namespace LGT_Ribbon.Seed
                   new Button(BrowseCommandsID.UnselectAll, BrowseCommands.UnselectAll){ Caption = "" },
                   new Button(QueryCommandID.InvertSelect, QueryCommands.InvertSelect){ Caption = "" },
                   // new Button(QueryCommandID.InvertSelect, QueryCommands.InvertSelect), // graphselect
-                  new Button(LayoutCommandID.ZoomIn, LayoutCommands.ZoomIn){ Caption = "" },
-                  new Button(LayoutCommandID.ZoomOut, LayoutCommands.ZoomOut){ Caption = "" },
+                  new Button(ToolCommandID.Recenter, ToolCommands.Recenter, ControlType.ToolButton){ Caption = "" },
+                  new Button(ToolCommandID.ZoomIn, ToolCommands.ZoomIn, ControlType.ToolButton){ Caption = "" },
+                  new Button(ToolCommandID.ZoomOut, ToolCommands.ZoomOut, ControlType.ToolButton){ Caption = "" },
                   new Button(MapCommandID.ChangeView, MapCommands.ChangeView){ Caption = "" },
                   // new Button(, ),// grab
-                  new Button(EditCommandID.GetInfo, EditCommands.GetInfo){ Caption = "" },
+                  new Button(ToolCommandID.PointQuery, ToolCommands.PointQuery){ Caption = "" }, // All Controls
                   new Button(ToolCommandID.HotLink, ToolCommands.HotLink){ Caption = "" },
                   new Button(ToolCommandID.LabelTool, ToolCommands.LabelTool){ Caption = "" },
                   new Button(MapCommandID.DragMap, MapCommands.DragMap){ Caption = "" },
@@ -695,7 +696,7 @@ namespace LGT_Ribbon.Seed
                   new Button(SpatialCommandID.InsertEllipse, SpatialCommands.InsertEllipse){ Caption = "" }, // "Ellipse"
                   new Button(SpatialCommandID.InsertRectangle, SpatialCommands.InsertRectangle){ Caption = "" }, // "Rectangle"
                   new Button(SpatialCommandID.InsertRoundedRectangle, SpatialCommands.InsertRoundedRectangle){ Caption = "" }, // "Rounded Rectangle"
-                  new Button(LayoutCommandID.InsertText, LayoutCommands.InsertText){ Caption = "" }, // "Text"
+                  new Button(SpatialCommandID.InsertText, SpatialCommands.InsertText){ Caption = "" }, // All Controls
                   //new Button(){ Caption = "" }, // "Frame"
                   new Button(SpatialCommandID.Reshape, SpatialCommands.Reshape){ Caption = "" }, // "Reshape"
                   new Button(ToolCommandID.AddNode, ToolCommands.AddNode){ Caption = "" }, // "Add Node"
