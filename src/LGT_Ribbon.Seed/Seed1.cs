@@ -702,6 +702,7 @@ namespace LGT_Ribbon.Seed
                   new Button(ToolCommandID.AddNode, ToolCommands.AddNode){ Caption = "" }, // "Add Node"
                   new Button(SpatialCommandID.LineStyle, SpatialCommands.LineStyle){ Caption = "" }, // All Controls
                   new Button(SpatialCommandID.RegionStyle, SpatialCommands.RegionStyle){ Caption = "" }, // All Controls
+                  new Button(SpatialCommandID.InsertSymbol, SpatialCommands.InsertSymbol){ Caption = "" }, // All Controls
                   new Button(SpatialCommandID.SymbolStyle, SpatialCommands.SymbolStyle){ Caption = "" }, // All Controls
                   new Button(SpatialCommandID.TextStyle, SpatialCommands.TextStyle){ Caption = "" }, // All Controls
                 }
@@ -710,7 +711,8 @@ namespace LGT_Ribbon.Seed
               {
                 Controls = new Button[]
                 {
-                  new Button(EditCommandID.Undo, EditCommands.Undo){ Caption = "Undo" }
+                  new Button(EditCommandID.Undo, EditCommands.Undo){ Caption = "Undo" },
+                  new Button(QueryCommandID.UnSelect, QueryCommands.UnSelect)
                 }
               }
             }
