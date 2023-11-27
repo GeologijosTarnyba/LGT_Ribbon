@@ -4,7 +4,7 @@
 ## Įkėlimas:
 ### Kompiliavimas
 Atlikus pakeitimus kode reikia sukompiliuoti projektą. Tai daroma per `visual studio` ar `dotnet cli` (geriau Release tipu, bet nelabai svarbu).
-Būtina įsidiegti MapBasic, nes kompiliavimas sukonfigūruotas taip kad ir MBX sukompiliuotu, ne tik `c#` dll.
+Būtina įsidiegti MapBasic, nes kompiliavimas sukonfigūruotas taip kad ir MBX sukompiliuotu, ne tik c# `dll`, bet ir mapinfo `MBX`.
 
 Sugeneruotas `LGT_Ribbon.mbx` randamas `"LGT_Ribbon\src\LGT_Ribbon\bin\Release\"` arba `"LGT_Ribbon\src\LGT_Ribbon\bin\Debug\"` aplanke.
 
