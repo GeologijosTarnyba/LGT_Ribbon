@@ -348,3 +348,31 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Documentation/Commands/ApplicationCommands.cs
+Documentation/Commands/BrowseCommands.cs
+Documentation/Commands/EditCommands.cs
+Documentation/Commands/Enums.cs
+Documentation/Commands/GridlineCommands.cs
+Documentation/Commands/HelpCommands.cs
+Documentation/Commands/LabelRulesCommands.cs
+Documentation/Commands/LayerControlCommands.cs
+Documentation/Commands/LayerEditCommands.cs
+Documentation/Commands/LayerLabelCommands.cs
+Documentation/Commands/LayoutCommands.cs
+Documentation/Commands/LayoutDesignerCommands.cs
+Documentation/Commands/LegendCommands.cs
+Documentation/Commands/MapCommands.cs
+Documentation/Commands/MapInfoCommand.cs
+Documentation/Commands/MapSetCommands.cs
+Documentation/Commands/OracleWorkspaceCommands.cs
+Documentation/Commands/PreferenceCommands.cs
+Documentation/Commands/QueryCommands.cs
+Documentation/Commands/RedistrictCommands.cs
+Documentation/Commands/SpatialCommands.cs
+Documentation/Commands/TableCommands.cs
+Documentation/Commands/TableListCommands.cs
+Documentation/Commands/ThemeCommands.cs
+Documentation/Commands/ToolCommands.cs
+Documentation/Commands/WebServicesCommands.cs
+Documentation/Commands/WindowCommands.cs
+Documentation/Commands/WindowListCommands.cs
