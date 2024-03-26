@@ -181,6 +181,7 @@ namespace LGT_Ribbon.Seed
                     new Button("Table", ControlType.DropDownButton){
                       IsLarge = true,
                       Children = new Button[]{
+                        new Button(TableCommandID.UpdateColumn, TableCommands.UpdateColumn){ IsLarge = true }, 
                         new Button(TableCommandID.ModifyStructure, TableCommands.ModifyStructure){ IsLarge = true },
                         new Button(TableCommandID.Pack, TableCommands.Pack){ IsLarge = true },
                         new Button(TableCommandID.Delete, TableCommands.Delete){ IsLarge = true },
