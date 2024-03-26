@@ -138,10 +138,10 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="BuildMapBasic" AfterTargets="Build" Inputs="@(CustomBuild)" Outputs="@(CustomBuild->'$(OutDir)\%(Filename).mbx')">
+  <!-- <Target Name="BuildMapBasic" AfterTargets="Build" Inputs="@(CustomBuild)" Outputs="@(CustomBuild->'$(OutDir)\%(Filename).mbx')">
     <Message Text="Building with mapbasic: $(MapBasicExePath)" />
     <MapBasicBuild.CompileMb SourceFiles="@(CustomBuild->'%(FullPath)')" MapBasicExe="$(MapBasicExePath)" OutputFolder="$(OutDir)" IntermediateFolder="$(IntDir)" />
-  </Target>
+  </Target> -->
   <PropertyGroup>
     <PostBuildEvent>
     </PostBuildEvent>
